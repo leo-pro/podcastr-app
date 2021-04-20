@@ -1,16 +1,21 @@
 import Head from "next/head";
 
-export default function Home() {
+export default function Home(props) {
   return (
-    <div>
-      <Head>
-        <title>Podcastr</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1>🎧 Podcastr</h1>
-      </main>
-    </div>
+    <>
+      <h1>Home</h1>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  const response = await fetch("http://localhost:3333/episodes");
+  const data = await response.json();
+
+  return {
+    props: {
+      episodes: data,
+    },
+    revalidate: 60 * 60 * 8,
+  };
 }
