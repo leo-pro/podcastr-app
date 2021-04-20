@@ -2,7 +2,11 @@ export default{
   title: 'dark',
 
   colors: {
-    white: '#333',
+    background: '#262626',
+    text: '',
+    
+    white: '#FFFFFF',
+    black: '#000000',
 
     gray_50: '#F7F8FA',
     gray_100: '#E6E8EB',

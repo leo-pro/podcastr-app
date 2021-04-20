@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components';
 import * as themes from '../styles/theme';
 
 function MyApp({ Component, pageProps }: AppProps){
-  const [theme, setTheme] = useState(themes.light);
+  const [theme, setTheme] = useState(themes.dark);
 
   function toggleTheme(){
     setTheme(theme.title === 'light' ? themes.dark : themes.light);

@@ -9,5 +9,6 @@ export default createGlobalStyle`
 
   html, body{
     font-family: 'Lexend', sans-serif;
+    background: ${props => props.theme.colors.gray_50}
   }
 `;
