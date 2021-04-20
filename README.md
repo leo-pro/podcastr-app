@@ -7,7 +7,7 @@
 
 <p>🖥️ <b>Demo:</b> <a href="https://boilerplate-nextjs-styled-components.vercel.app/" target="_blank">Click here</a></p>
 
-## Install and Run
+## Getting started
 To install and run the application:
 
 * Clone repository and install dependencies: 
@@ -29,7 +29,7 @@ To install and run the application:
   npm run build
 ```
 
-## Techs
+## Technologies
 <p>
   <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=next.js&logoColor=white">
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white">
