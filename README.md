@@ -1,9 +1,8 @@
-<h2 align="center">
-<img src="https://raw.githubusercontent.com/leo-pro/template-nextjs-styled-components/main/public/image.jpg" width="20px"> Boilerplate for Next.js
-</h2>
+<div align="center">
+  <img src=".github/podcastr-logo.svg" alt="Podcastr logo">
+</div>
 
 ## 🎬 Preview
-<img src="https://raw.githubusercontent.com/leo-pro/template-nextjs-styled-components/main/public/video.gif" width="70%">
 
 <p>🖥️ <b>Demo:</b> <a href="https://podcastr-app.vercel.app/" target="_blank">Click here</a></p>
 
