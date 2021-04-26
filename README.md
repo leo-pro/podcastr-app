@@ -5,7 +5,7 @@
 ## 🎬 Preview
 <img src="https://raw.githubusercontent.com/leo-pro/template-nextjs-styled-components/main/public/video.gif" width="70%">
 
-<p>🖥️ <b>Demo:</b> <a href="https://boilerplate-nextjs-styled-components.vercel.app/" target="_blank">Click here</a></p>
+<p>🖥️ <b>Demo:</b> <a href="https://podcastr-app.vercel.app/" target="_blank">Click here</a></p>
 
 ## 🚀 Getting started
 To install and run the application:
@@ -38,4 +38,4 @@ To install and run the application:
 </p>
 
 ##
-<p align="center">Made With ❤️ & NextJS by <a href="https://www.linkedin.com/in/leonardoalvess/">Leonardo Alves</a></p>
+<p align="center">Made With ❤️ & NextJS by <a href="https://www.linkedin.com/in/leonardoalvess/">Leonardo Alves - Check out my LinkedIn</a></p>
