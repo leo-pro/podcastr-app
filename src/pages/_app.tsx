@@ -9,6 +9,7 @@ import * as themes from "../styles/theme";
 
 import { Header } from "../components/Header";
 import Player from "../components/Player";
+import { PlayerContextProvider } from "../contexts/PlayerContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState(themes.light);
@@ -19,14 +20,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Wrapper>
-        <main>
-          <Header />
-          <Component {...pageProps} />
-        </main>
-        <Player />
-      </Wrapper>
+      <PlayerContextProvider>
+        <GlobalStyle />
+        <Wrapper>
+          <main>
+            <Header />
+            <Component {...pageProps} />
+          </main>
+          <Player />
+        </Wrapper>
+      </PlayerContextProvider>
     </ThemeProvider>
   );
 }

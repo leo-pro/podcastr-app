@@ -1,13 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import Document, { DocumentContext, DocumentInitialProps, Html, Main, NextScript} from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
-import Head from 'next/head';
+import Document, {
+  DocumentContext,
+  DocumentInitialProps,
+  Html,
+  Main,
+  NextScript,
+} from "next/document";
+import { ServerStyleSheet } from "styled-components";
+import Head from "next/head";
 
-export default class MyDocument extends Document{
+export default class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
-  ):Promise<DocumentInitialProps>{
+  ): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -16,9 +22,9 @@ export default class MyDocument extends Document{
         originalRenderPage({
           enhanceApp: (App) => (props) =>
             sheet.collectStyles(<App {...props} />),
-        })
+        });
 
-      const initialProps = await Document.getInitialProps(ctx)
+      const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
         styles: (
@@ -27,26 +33,29 @@ export default class MyDocument extends Document{
             {sheet.getStyleElement()}
           </>
         ),
-      }
+      };
     } finally {
-      sheet.seal()
+      sheet.seal();
     }
-  };
-  render(){
-    return(
+  }
+  render() {
+    return (
       <Html lang="pt-BR">
         <Head>
-          <meta charSet="utf-8"/>
-          <link rel="icon" href="/favicon.png" />
-  
-          <link rel="preconnect" href="https://fonts.gstatic.com"/>
-          <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend:wght@500;600&display=swap" rel="stylesheet"/> 
+          <meta charSet="utf-8" />
+          <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend:wght@500;600&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
-          <Main/>
-          <NextScript/>
+          <Main />
+          <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }

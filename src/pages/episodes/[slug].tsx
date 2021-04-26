@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { usePlayer } from "../../contexts/PlayerContext";
 import Image from "next/image";
 import { format, parseISO } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
@@ -8,6 +8,7 @@ import { convertDurationToTimeString } from "../../utils/convertDurationToTimeSt
 
 import { Container } from "../../styles/pages/Episodes";
 import Link from "next/link";
+import Head from "next/head";
 
 type Episode = {
   id: string;
@@ -26,8 +27,13 @@ type EpisodeProps = {
 };
 
 export default function Episode({ episode }: EpisodeProps) {
+  const { play } = usePlayer();
+
   return (
     <Container>
+      <Head>
+        <title>{episode.title}</title>
+      </Head>
       <div className="episode">
         <div className="thumbnailContainer">
           <Link href="/">
@@ -41,7 +47,7 @@ export default function Episode({ episode }: EpisodeProps) {
             src={episode.thumbnail}
             objectFit="cover"
           />
-          <button type="button">
+          <button type="button" onClick={() => play(episode)}>
             <img src="/play.svg" alt="Play episode" />
           </button>
         </div>
