@@ -1,5 +1,6 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/leo-pro/podcastr-app/f0ead4b8947601c3fb4d93c05744292686ea83c0/public/logo.svg" alt="Podcastr logo">
+  <h3>Podcastr is a platform built for podcast streaming.</h3>
 </div>
 
 ## 🎬 Preview
