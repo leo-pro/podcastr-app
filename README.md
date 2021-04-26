@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/leo-pro/podcastr-app/tree/main/public/logo.svg" alt="Podcastr logo">
+  <img src="https://raw.githubusercontent.com/leo-pro/podcastr-app/f0ead4b8947601c3fb4d93c05744292686ea83c0/public/logo.svg" alt="Podcastr logo">
 </div>
 
 ## 🎬 Preview
