@@ -3,8 +3,6 @@
   <h3>Podcastr is a platform built for podcast streaming.</h3>
 </div>
 
-## 🎬 Preview
-
 <p>🖥️ <b>Demo:</b> <a href="https://podcastr-app.vercel.app/" target="_blank">Click here</a></p>
 
 ## 🚀 Getting started
