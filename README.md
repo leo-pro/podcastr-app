@@ -10,8 +10,8 @@ To install and run the application:
 
 * Clone repository and install dependencies: 
 ```
-  git clone https://github.com/leo-pro/template-nextjs-styled-components/
-  cd template-nextjs-styled-components
+  git clone https://github.com/leo-pro/podcastr-app/
+  cd podcastr-app
   yarn or npm install
 ```
 * Running the project into your browser at http://localhost:3000
