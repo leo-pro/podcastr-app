@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 export const Container = styled.div`
-  padding: 0 3rem;
+  padding: 0 2.5rem;
+  width: 100%;
   height: calc(100vh - 6.5rem);
   overflow-y: scroll;
+  overflow-x: hidden;
 
   h2 {
     margin-top: 3rem;
@@ -20,8 +23,8 @@ export const LatestEpisodes = styled.div`
   }
 
   li {
-    background: ${(props) => props.theme.colors.white};
-    border: 1px solid ${(props) => props.theme.colors.gray_100};
+    background: ${(props) => props.theme.colors.CardBackground};
+    border: 1px solid ${(props) => props.theme.colors.BorderLineColor};
     padding: 1.25rem;
     border-radius: 1.5rem;
     position: relative;
@@ -41,7 +44,7 @@ export const LatestEpisodes = styled.div`
 
       a {
         display: block;
-        color: ${(props) => props.theme.colors.gray_800};
+        color: ${(props) => props.theme.colors.headings};
         font-family: Lexend, sans-serif;
         font-weight: 600;
         text-decoration: none;
@@ -92,8 +95,8 @@ export const LatestEpisodes = styled.div`
 
       width: 2.5rem;
       height: 2.5rem;
-      background: var(--white);
-      border: 1px solid var(--gray-100);
+      background: ${(props) => props.theme.colors.CardPlayButtonBackground};
+      border: 1px solid ${(props) => props.theme.colors.BorderLineColor};
       border-radius: 0.675rem;
       font-size: 0;
 
@@ -119,14 +122,14 @@ export const AllEpisodes = styled.div`
   table {
     width: 100%;
 
-    td,
+    th,
     td {
       padding: 0.75rem 1rem;
-      border-bottom: 1px solid var(--gray-100);
+      border-bottom: 1px solid ${(props) => props.theme.colors.BorderLineColor};
     }
 
     th {
-      color: var(--gray-200);
+      color: ${(props) => props.theme.colors.text};
       text-transform: uppercase;
       font: 500 0.75rem Lexend, sans-serif;
       text-align: left;
@@ -142,7 +145,7 @@ export const AllEpisodes = styled.div`
       }
 
       a {
-        color: var(--gray-800);
+        color: ${(props) => props.theme.colors.headings};
         font-family: Lexend, sans-serif;
         font-weight: 600;
         text-decoration: none;
@@ -155,14 +158,15 @@ export const AllEpisodes = styled.div`
       }
 
       button {
-        width: 2rem;
-        height: 2rem;
-        background: var(--white);
-        border: 1px solid var(--gray-100);
-        border-radius: 0.5rem;
         font-size: 0;
 
-        transition: filter 0.2s;
+        width: 2rem;
+        height: 2rem;
+        background: ${(props) => props.theme.colors.CardPlayButtonBackground};
+        border: 1px solid ${(props) => props.theme.colors.BorderLineColor};
+        border-radius: 0.675rem;
+
+        transition: filter 0.3s;
 
         img {
           width: 1.25rem !important;

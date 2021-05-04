@@ -25,13 +25,13 @@ export default createGlobalStyle`
 
   body, input, text-area, button{
     font: 500 1rem Inter, sans-serif;
-    color: ${(props) => props.theme.colors.gray_500}
+    color: ${(props) => props.theme.colors.text}
   }
 
   h1, h2, h3, h4, h5, h6{
     font-weight: 600;
     font-family: Lexend, sans-serif;
-    color: ${(props) => props.theme.colors.gray_800}
+    color: ${(props) => props.theme.colors.headings}
   }
 
   h1{
@@ -44,5 +44,22 @@ export default createGlobalStyle`
 
   button{
     cursor: pointer;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    background: #fff;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: ${(props) => props.theme.colors.BorderLineColor};
+  }
+  ::-webkit-scrollbar-track {
+    background: ${(props) => props.theme.colors.background};
   }
 `;

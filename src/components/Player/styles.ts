@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 3rem 2rem; //Inicial tem o valor: 3rem 4rem
   width: 26.5rem;
+  padding: 3rem; //Inicial tem o valor: 3rem 2rem
+
   height: 100vh;
 
-  background: ${(props) => props.theme.colors.purple_500};
+  background: ${(props) => props.theme.colors.playerBackground};
   color: ${(props) => props.theme.colors.white};
 
   display: flex;
@@ -49,7 +50,7 @@ export const CurrentEpisode = styled.div`
 
   span {
     display: block;
-    margin-top: 1rem;
+    margin-top: 1rem 0;
     opacity: 0.6;
     line-height: 1.5rem;
   }
@@ -58,7 +59,7 @@ export const CurrentEpisode = styled.div`
 export const EmptyPlayer = styled.div`
   width: 100%;
   height: 20rem;
-  border: 3.5px dashed ${(props) => props.theme.colors.purple_300};
+  border: 1.5px dashed ${(props) => props.theme.colors.purple_300};
   border-radius: 1.5rem;
   background: linear-gradient(
     143.8deg,
@@ -364,8 +365,8 @@ export const ControlButtons = styled.div`
     background: transparent;
     border: 0;
     font-size: 0;
-
-    transition: filter 0.2s;
+    cursor: pointer;
+    transition: filter 0.3s;
 
     &:disabled {
       cursor: default;

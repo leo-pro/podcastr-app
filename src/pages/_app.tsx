@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <GlobalStyle />
         <Wrapper>
           <main>
-            <Header />
+            <Header toggleTheme={toggleTheme} />
             <Component {...pageProps} />
           </main>
           <Player />

@@ -43,7 +43,9 @@ export default class MyDocument extends Document {
       <Html lang="pt-BR">
         <Head>
           <meta charSet="utf-8" />
-          <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+          <meta name="theme-color" content="#ffffff" />
+          <link rel="shortcut icon" href="/favicon.png" />
+          <link rel="manifest" href="/manifest.json" />
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link

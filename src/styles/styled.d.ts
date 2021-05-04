@@ -1,11 +1,12 @@
-import 'styled-components';
+import "styled-components";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
     title: string;
-    
+
     colors: {
       background: string;
+      headings: string;
       text: string;
 
       white: string;
@@ -18,11 +19,18 @@ declare module 'styled-components' {
       gray_800: string;
 
       green_500: string;
-      
+
       purple_300: string;
       purple_400: string;
       purple_500: string;
       purple_800: string;
+
+      HeaderBackground: string;
+      HeaderBorderLineColor: string;
+      BorderLineColor: string;
+      CardBackground: string;
+      CardPlayButtonBackground: string;
+      playerBackground: string;
     };
   }
 
@@ -30,6 +38,7 @@ declare module 'styled-components' {
     title: string;
     colors: {
       background: string;
+      headings: string;
       text: string;
 
       white: string;
@@ -42,11 +51,18 @@ declare module 'styled-components' {
       gray_800: string;
 
       green_500: string;
-      
+
       purple_300: string;
       purple_400: string;
       purple_500: string;
       purple_800: string;
+
+      HeaderBackground: string;
+      HeaderBorderLineColor: string;
+      BorderLineColor: string;
+      CardBackground: string;
+      CardPlayButtonBackground: string;
+      playerBackground: string;
     };
   }
 }

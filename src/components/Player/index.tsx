@@ -80,7 +80,7 @@ function Player() {
   return (
     <Container>
       <Head>
-        <title>Home | Podcastr</title>
+        <title>Podcastr | Home</title>
       </Head>
       <header>
         <img src="/playing.svg" alt="Tocando agora" />
@@ -90,9 +90,10 @@ function Player() {
       {episode ? (
         <CurrentEpisode>
           <Image
-            width={592}
-            height={592}
+            width={320}
+            height={320}
             src={episode.thumbnail}
+            alt={episode.title}
             objectFit="cover"
           />
           <strong>{episode.title}</strong>
@@ -110,7 +111,7 @@ function Player() {
           <SliderContainer>
             {episode ? (
               <Slider
-                max={episode.duration}
+                max={episode?.duration}
                 value={progress}
                 onChange={handleSeek}
                 trackStyle={{ backgroundColor: "#04d361" }}
