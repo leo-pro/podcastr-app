@@ -5,14 +5,14 @@ import {
   ReactElement,
   useState,
 } from "react";
+
 import { ThemeProvider as ThemeStyledProvider } from "styled-components";
 
 import { GlobalStyles } from "../styles/global";
-import { themes, ThemeName } from "../styles/theme";
+import * as themes from "../styles/themes";
 
 export interface ThemeContextData {
   switchTheme: () => void;
-  theme: ThemeName;
 }
 
 interface ThemeProps {
@@ -22,11 +22,11 @@ interface ThemeProps {
 export const ThemeContext = createContext({} as ThemeContextData);
 
 export function ThemeProvider({ children }: ThemeProps): ReactElement {
-  const [theme, setTheme] = useState<ThemeName>("light");
-  const currentTheme = themes[theme];
+  const [theme, setTheme] = useState(themes.light);
+  const currentTheme = theme;
 
   function switchTheme() {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme.title === "light" ? themes.dark : themes.light);
   }
 
   useEffect(() => {
