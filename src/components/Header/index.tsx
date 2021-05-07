@@ -6,14 +6,12 @@ import { ThemeContext } from "styled-components";
 
 import { BiSun, BiMoon } from "react-icons/bi";
 
+import { useTheme } from "../../hooks/useTheme";
+
 import { Container } from "./styles";
 
-interface HeaderProps {
-  toggleTheme: () => void;
-}
-
-export function Header({ toggleTheme }: HeaderProps) {
-  const { title } = useContext(ThemeContext);
+export function Header() {
+  const { theme, switchTheme } = useTheme();
 
   const currentDate = format(new Date(), "EEE, d MMM", {
     locale: ptBR,
@@ -21,7 +19,7 @@ export function Header({ toggleTheme }: HeaderProps) {
 
   return (
     <Container>
-      {title === "light" ? (
+      {theme === "light" ? (
         <img src="/logo.svg" alt="Podcastr" />
       ) : (
         <img src="/logo-white.svg" alt="Podcastr" />
@@ -31,7 +29,7 @@ export function Header({ toggleTheme }: HeaderProps) {
 
       <span>{currentDate}</span>
 
-      <a onClick={toggleTheme}>{title === "light" ? <BiMoon /> : <BiSun />}</a>
+      <a onClick={switchTheme}>{theme === "light" ? <BiMoon /> : <BiSun />}</a>
     </Container>
   );
 }
