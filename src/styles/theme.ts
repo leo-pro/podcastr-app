@@ -11,6 +11,8 @@ export const themes = {
       gray_50: "#F7F8FA",
       gray_100: "#E6E8EB",
       gray_200: "#AFB2B1",
+      gray_500: "#808080",
+      gray_800: "#494D4B",
 
       green_500: "#04D361",
 
@@ -42,6 +44,8 @@ export const themes = {
       gray_50: "#F7F8FA",
       gray_100: "#E6E8EB",
       gray_200: "#AFB2B1",
+      gray_500: "#808080",
+      gray_800: "#494D4B",
 
       green_500: "#04D361",
 
