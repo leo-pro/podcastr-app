@@ -11,8 +11,11 @@ import { ThemeProvider as ThemeStyledProvider } from "styled-components";
 import { GlobalStyles } from "../styles/global";
 import * as themes from "../styles/themes";
 
+import { MyTheme } from "../styles/themes/myTheme";
+
 export interface ThemeContextData {
   switchTheme: () => void;
+  theme: MyTheme;
 }
 
 interface ThemeProps {
@@ -23,7 +26,6 @@ export const ThemeContext = createContext({} as ThemeContextData);
 
 export function ThemeProvider({ children }: ThemeProps): ReactElement {
   const [theme, setTheme] = useState(themes.light);
-  const currentTheme = theme;
 
   function switchTheme() {
     setTheme(theme.title === "light" ? themes.dark : themes.light);
@@ -43,7 +45,7 @@ export function ThemeProvider({ children }: ThemeProps): ReactElement {
 
   return (
     <ThemeContext.Provider value={{ switchTheme, theme }}>
-      <ThemeStyledProvider theme={currentTheme}>
+      <ThemeStyledProvider theme={theme}>
         <GlobalStyles />
         {children}
       </ThemeStyledProvider>

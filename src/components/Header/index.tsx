@@ -27,7 +27,9 @@ export function Header() {
 
       <span>{currentDate}</span>
 
-      <a onClick={switchTheme}>{theme === "light" ? <BiMoon /> : <BiSun />}</a>
+      <a onClick={switchTheme}>
+        {theme.title === "light" ? <BiMoon /> : <BiSun />}
+      </a>
     </Container>
   );
 }
